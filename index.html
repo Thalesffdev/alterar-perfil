@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuario</title>
+
+    <!-- SEO Básico -->
+    <meta name="description" content="Área de perfil de usuário interativa para portfólio. Veja, edite e personalize informações como foto, nome e descrição. Projeto para treinar HTML, CSS e JS.">
+    <meta name="keywords" content="perfil, usuário, portfólio, HTML, CSS, JS, edição, imagem, responsivo, web, front-end">
+    <meta name="author" content="Thales Fernandes">
+
+    <!-- Acessibilidade e responsividade -->
+    <meta name="theme-color" content="#2d2d2d">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Meu perfil</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner" data-banner="assets/midia/imagens/banner.jpg">
+        <div class="container">
+            <div class="user-avatar">
+                <figure>
+                    <img src="assets/img/avatar.jpg" data-avatar="assets/img/avatar.jpg" alt="Foto de perfil de Thales Fernandes de Faria">
+                    <figcaption class="none">Thales Fernandes de Faria</figcaption>
+                </figure>
+            </div>
+            <button id="botao-editar" name="editar"><img src="assets/midia/icones/editar.png" alt="Editar informações"></button>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <h1 data-nome="Thales Fernandes de Faria">Thales Fernandes de Faria</h1>
+            <p data-descricao="Lorem ipsum sit dolor amet velum.">Lorem ipsum sit dolor amet velum.</p>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>
