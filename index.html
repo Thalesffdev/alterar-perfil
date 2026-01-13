@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Usuario</title>
+    <title>Perfil do Usuário</title>
 
     <!-- SEO Básico -->
     <meta name="description" content="Área de perfil de usuário interativa para portfólio. Veja, edite e personalize informações como foto, nome e descrição. Projeto para treinar HTML, CSS e JS.">
@@ -18,42 +18,92 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <nav>
-                <div class="mn-mobile">
-                    <div class="mn-mobile-bar"></div>
-                    <div class="mn-mobile-bar"></div>
-                    <div class="mn-mobile-bar"></div>
+
+<header id="header">
+    <div class="container">
+        <nav>
+            <div class="mn-mobile">
+                <div class="mn-mobile-bar"></div>
+                <div class="mn-mobile-bar"></div>
+                <div class="mn-mobile-bar"></div>
+            </div>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Meu perfil</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section id="banner" data-banner="assets/midia/imagens/banner.jpg">
+    <div class="container">
+
+        <article class="user-avatar">
+            <figure>
+                <img src="assets/midia/imagens/Thales.jpg"
+                     data-avatar="assets/midia/imagens/Thales.jpg"
+                     alt="Foto de perfil de Thales Fernandes de Faria">
+                <figcaption class="none">Thales Fernandes de Faria</figcaption>
+            </figure>
+            <div class="editar-avatar">Editar perfil</div>
+        </article>
+
+        <article class="user-infos">
+            <h1 data-nome="Thales Fernandes de Faria">Thales Fernandes de Faria</h1>
+            <p data-descricao="Lorem ipsum sit dolor amet velum.">
+                Lorem ipsum sit dolor amet velum.
+            </p>
+        </article>
+
+        <button id="botao-editar" name="editar">
+            Editar perfil
+            <img src="assets/midia/icones/editar.png" alt="Editar informações">
+        </button>
+
+    </div>
+</section>
+
+<section id="modal-area">
+    <div class="container">
+
+        <div class="modal">
+
+            <form class="modal-left">
+                <div class="modal-left-avatar">
+                    <img src="" alt="Prévia da imagem de perfil">
+                    <label for="avatar">Selecionar imagem</label>
+                    <input type="file" name="avatar" id="avatar" accept="image/*">
                 </div>
-                <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Meu perfil</a></li>
-                    <li><a href="">Contato</a></li>
-                </ul>
-            </nav>
+
+                <div class="modal-left-banner">
+                    <img src="" alt="Prévia da imagem de banner">
+                    <label for="banner">Selecionar imagem</label>
+                    <input type="file" name="banner" id="banner" accept="image/*">
+                </div>
+            </form>
+
+            <form class="modal-right">
+                <h2>Editar informações</h2>
+
+                <label for="edit-nome">Nome</label>
+                <input type="text" id="edit-nome">
+
+                <label for="edit-desc">Descrição</label>
+                <textarea name="descricao-area" id="edit-desc"></textarea>
+
+                <button id="salvar" type="submit">Salvar</button>
+            </form>
+
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="banner" data-banner="assets/midia/imagens/banner.jpg">
-        <div class="container">
-            <div class="user-avatar">
-                <figure>
-                    <img src="assets/midia/imagens/Thales.jpg" data-avatar="assets/midia/imagens/Thales.jpg" alt="Foto de perfil de Thales Fernandes de Faria">
-                    <figcaption class="none">Thales Fernandes de Faria</figcaption>
-                </figure>
-                <div class="editar-avatar">Editar perfil</div>
-            </div>
-            <div class="user-infos">
-                <h1 data-nome="Thales Fernandes de Faria">Thales Fernandes de Faria</h1>
-                <p data-descricao="Lorem ipsum sit dolor amet velum.">Lorem ipsum sit dolor amet velum.</p>
-            </div>
-            
-            <button id="botao-editar" name="editar">Editar perfil<img src="assets/midia/icones/editar.png" alt="Editar informações"></button>
-        </div>
-    </section>
+</main>
 
+<script src="assets/js/script.js" defer></script>
 
-    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
