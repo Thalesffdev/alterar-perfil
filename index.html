@@ -16,94 +16,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              
+            }
+          }
+        }
+      }
+    </script>
 </head>
 <body>
-
-<header id="header">
-    <div class="container">
-        <nav>
-            <div class="mn-mobile">
-                <div class="mn-mobile-bar"></div>
-                <div class="mn-mobile-bar"></div>
-                <div class="mn-mobile-bar"></div>
-            </div>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Meu perfil</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main>
-
-<section id="banner" data-banner="assets/midia/imagens/banner.jpg">
-    <div class="container">
-
-        <article class="user-avatar">
-            <figure>
-                <img src="assets/midia/imagens/Thales.jpg"
-                     data-avatar="assets/midia/imagens/Thales.jpg"
-                     alt="Foto de perfil de Thales Fernandes de Faria">
-                <figcaption class="none">Thales Fernandes de Faria</figcaption>
-            </figure>
-            <div class="editar-avatar">Editar perfil</div>
-        </article>
-
-        <article class="user-infos">
-            <h1 data-nome="Thales Fernandes de Faria">Thales Fernandes de Faria</h1>
-            <p data-descricao="Lorem ipsum sit dolor amet velum.">
-                Lorem ipsum sit dolor amet velum.
-            </p>
-        </article>
-
-        <button id="botao-editar" name="editar">
-            Editar perfil
-            <img src="assets/midia/icones/editar.png" alt="Editar informações">
-        </button>
-
-    </div>
-</section>
-
-<section id="modal-area">
-    <div class="container">
-
-        <div class="modal">
-
-            <form class="modal-left">
-                <div class="modal-left-avatar">
-                    <img src="" alt="Prévia da imagem de perfil">
-                    <label for="avatar">Selecionar imagem</label>
-                    <input type="file" name="avatar" id="avatar" accept="image/*">
+    <header id="header" class="w-full bg-gray-900  md:h-20">
+        <div class="container mx-auto h-full">
+            <nav class="flex flex-col justify-end items-end w-full h-full overflow-hidden">
+                <div class="w-10 h-10 m-3 flex justify-center items-center md:hidden">
+                    <svg class="stroke-white transition duration-300 ease-in-out cursor-pointer transform hover:scale-110 hover:stroke-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                    </svg>
                 </div>
-
-                <div class="modal-left-banner">
-                    <img src="" alt="Prévia da imagem de banner">
-                    <label for="banner">Selecionar imagem</label>
-                    <input type="file" name="banner" id="banner" accept="image/*">
-                </div>
-            </form>
-
-            <form class="modal-right">
-                <h2>Editar informações</h2>
-
-                <label for="edit-nome">Nome</label>
-                <input type="text" id="edit-nome">
-
-                <label for="edit-desc">Descrição</label>
-                <textarea name="descricao-area" id="edit-desc"></textarea>
-
-                <button id="salvar" type="submit">Salvar</button>
-            </form>
-
+                <ul class="flex flex-col w-full h-0 transition md:flex-row md:w-auto md:h-full">
+                    <li class="p-5 w-full flex justify-center items-center transition duration-300 ease-in-out cursor-pointer text-lg text-white hover:bg-blue-500 md:px-10"><a class="" href="">Inicio</a></li>
+                    <li class="p-5 w-full flex justify-center items-center transition duration-300 ease-in-out cursor-pointer text-lg text-white hover:bg-blue-500 md:px-10"><a class="" href="">Perfil</a></li>
+                    <li class="p-5 w-full flex justify-center items-center transition duration-300 ease-in-out cursor-pointer text-lg text-white hover:bg-blue-500 md:px-10"><a class="" href="">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
+    <section id="banner" class="w-full pb-10 bg-[url(assets/midia/imagens/header-bg.jpg)] bg-cover bg-center relative md:pb-0">
+        <div class="container mx-auto py-10">
+            <div id="avatar-area" class="px-2 flex flex-col justify-center items-center md:flex-row md:justify-start  md:items-end">  
+                <div class="group flex-shrink-0 rounded-full overflow-hidden cursor-pointer transform md:translate-y-[80px]">
+                    <img class="w-60 h-60 rounded-full object-cover group-hover:scale-110 transition" src="assets/midia/imagens/Thales.jpg" alt="">
+                </div> 
+                <div class="md:ml-10">
+                    <h1 class="text-3xl font-bold text-center text-white mt-4 mb-2 md:text-left">Thales Fernandes</h1>
+                    <p class="text-lg text-center text-gray-200 md:text-left">Desenvolvedor-end</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute right-5 bottom-5 w-10 h-10 bg-blue-500 cursor-pointer p-2 flex justify-center items-center">
+            <svg class="w-full h-full stroke-white transition transform hover:scale-110" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            </svg>
+        </div>
+    </section>
+    <section id="modal" class=" absolute top-0 left-0 w-full bg-gray-800/50 flex flex-col items-end transition"> 
+        <div class="m-2 w-10 h-10 bg-blue-500 cursor-pointer p-2 flex justify-center items-center">
+            <svg class="stroke-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </div>
 
-</main>
+        <div class="container mx-auto mb-16 flex justify-center items-center h-full">
+            <div id="modal" class="w-full h-200 bg-white p-5">
+                <div id="edit-area" class="w-full max-w-[920px] mx-auto">
+
+                     <div id="edit-perfil" class="w-full py-2 mb-5 flex flex-col justify-between border border-gray-200 p-2 transition">
+                        <div id="edit-perfil-prev" class="w-full flex justify-between items-center border border-transparent pb-2 border-b-gray-200">
+                            <h2>Editar Foto de perfil</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div id="edit-perfil-content" class="w-full h-content p-5 flex flex-col justify-center items-center overflow-hidden">
+                            <img src="assets/midia/imagens/Thales.jpg" class="w-[220px] h-[220px] rounded-full object-cover mb-5" alt="">
+                            <input type="file" class="py-2 px-5 rounded-sm text-white bg-blue-500">
+                        </div>
+                    </div>
+
+                    <div id="edit-capa" class="w-full py-2 mb-5 flex flex-col justify-between border border-gray-200 p-2 transition">
+                        <div id="edit-perfil-prev" class="w-full flex justify-between items-center border border-transparent pb-2 border-b-gray-200">
+                            <h2>Editar Foto de capa</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div id="edit-perfil-content" class="w-full h-content p-5 flex flex-col justify-center items-center overflow-hidden">
+                            <img src="assets/midia/imagens/header-bg.jpg" class="w-full h-[180px] object-cover mb-5" alt="">
+                            <input type="file" class="py-2 px-5 rounded-sm text-white bg-blue-500">
+                        </div>
+                    </div>
+
+                    <div id="edit-capa" class="w-full py-2 mb-5 flex flex-col justify-between border border-gray-200 p-2 transition">
+                        <div id="edit-infos-prev" class="w-full  flex justify-between items-center border border-transparent pb-2 border-b-gray-200">
+                            <h2>Informações pessoais</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div id="edit-perfil-content" class="w-full h-content p-5 flex flex-col justify-start items-start overflow-hidden">
+                            <p class="font-bold text-lg">Nome de usuario:</p>
+                            <input type="text" class="mb-5 bg-gray-100 border border-gray-300 py-2 px-5  w-full" placeholder="Thales Fernandes de Faria">
+
+                            <p class="font-bold text-lg">Descrição:</p>
+                            <textarea type="text" class="mb-5 bg-gray-100 border border-gray-300 py-2 px-5 w-full h-[150px] resize-none" placeholder="Desenvolvedor-end"></textarea>
+                            <button class="my-3 bg-blue-500 py-2 px-5 text-white rounded-sm">Salvar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <script src="assets/js/script.js" defer></script>
-
 </body>
 </html>
